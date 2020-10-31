@@ -1,8 +1,18 @@
 from pathlib import Path
 import os
-from flask import Flask, g, render_template, request, session, flash, redirect, url_for, jsonify
+from flask import (Flask,
+ g, 
+render_template, 
+request, 
+session, 
+flash, 
+redirect, 
+url_for, 
+jsonify
+)
 
 from flask_sqlalchemy import SQLAlchemy
+
 basedir = Path(__file__).resolve().parent
 DATABASE = "flaskr.db"
 USERNAME = "admin"
@@ -23,6 +33,8 @@ db = SQLAlchemy(app)
 
 from project import models
 # open db connection
+
+
 
 @app.route('/')
 def index():
